@@ -48,7 +48,10 @@ int main(){
     printf("vamos cadastrar a segunda carta agora.\n");
 
     printf("Digite a letra do Estado: ");
-    scanf("%c", &estado2);
+    // adicionado um espaço " " antes de especificador de formato para evitar erros e pular 
+    // para a p´roxima instrução (o enter anterior fica em buffer e atrapalha - Isso é uma 
+    // peculiaridade da linguagem C)
+    scanf(" %c", &estado2);
 
     printf("Digite o código da carta: ");
     scanf("%s", codigo2);
@@ -79,6 +82,6 @@ int main(){
     printf("Número de pontos turísticos: %d\n", numero_pontos_turisticos2);
     
     printf("Cadastro das duas cartas finalizado.");
-    
+
     return 0;
 }
